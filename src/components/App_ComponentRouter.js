@@ -5,6 +5,8 @@ import HomePage from '../pages/HomePage';
 import AboutPage from '../pages/AboutPage';
 import ContactPage from '../pages/ContactPage';
 import Navbar from './Navbar';
+import ProjectLayout from '../templates/ProjectLayout';
+import PokemonProject from '../pages/projects/PokemonProject';
 
 
 function App() {
@@ -21,7 +23,11 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/about' element={<AboutPage />} />
           <Route path='/contact' element={<ContactPage />} />
-        </Routes>
+          <Route path="/projects" element={<ProjectLayout />}>
+            <Route path="pokemon" element={<PokemonProject />}> </Route>
+            {/* <Route path="/projects/pokemon" element={<PokemonProject />}> </Route> */}
+          </Route>
+          </Routes>
       </BrowserRouter>
     </div>
   );
