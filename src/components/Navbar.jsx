@@ -25,10 +25,15 @@ export default function Navbar () {
             }} >
                 <h3>Contact</h3>
             </NavLink>
-            <NavLink to={"/projects"} className={({isActive}) => {
+            <NavLink end to={"/projects"} className={({isActive}) => {
                 return isActive ? "active" : ""
             }}  >
                 <h3>Projects</h3>
+            </NavLink>
+            <NavLink to={"/projects/pokemon"} className={({isActive}) => {
+                return isActive ? "active" : ""
+            }}  >
+                <h3>Pokemon Project</h3>
             </NavLink>
         </nav>
     );

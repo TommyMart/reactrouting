@@ -25,7 +25,7 @@ function App() {
           <Route path='/contact' element={<ContactPage />} />
           <Route path="/projects" element={<ProjectLayout />}>
             <Route path="pokemon" element={<PokemonProject />}> </Route>
-            {/* <Route path="/projects/pokemon" element={<PokemonProject />}> </Route> */}
+            <Route path="/projects/pokemon/:pokemonNumber" element={<PokemonProject />}> </Route>
           </Route>
           </Routes>
       </BrowserRouter>
